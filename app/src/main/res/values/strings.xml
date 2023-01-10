@@ -1,0 +1,256 @@
+<resources>
+    <string name="appName">NiveshFDSDK</string>
+    <string name="bajaj">Bajaj</string>
+    <string name="app">App</string>
+    <string name="source">nivesh</string>
+
+    <string name="step1">Step 1</string>
+    <string name="step2">Step 2</string>
+    <string name="step3">Step 3</string>
+    <string name="step4">Step 4</string>
+
+    <!-- Step 1 -->
+    <string name="fd">Corporate Fixed Deposits</string>
+    <string name="schemeRating"><![CDATA[Ratings: CRISIL AAA/Stable & ICRA AAA/Stable]]></string>
+    <string name="rs">Rs. </string>
+    <string name="investmentAmount">Select Investment Amount</string>
+    <string name="selectInterestPayout">Select Interest Payout</string>
+    <string name="selectInterestTenure">Select Investment Tenure</string>
+    <string name="upto0.25">Up to 0.25% p.a for </string>
+    <string name="upto0.25next">Up to 0.25% p.a for Senior Citizens, 60+</string>
+    <string name="maturityInstructions">Maturity Instructions:</string>
+    <string name="additionalDetailOne">Automatically credit to my bank account</string>
+    <string name="additionalDetailTwo">Automatically renew principal amount</string>
+    <string name="additionalDetailThree">Automatically renew both principal and interest amount</string>
+    <string name="taxDeductedAtSourceTds">Tax Deducted at Source (TDS):</string>
+    <string name="TDSForm">Please ensure to upload the Form 15 G / H, when you receive a mail from the Company for the same</string>
+    <string name="deductTds">Deduct TDS (Income is taxable)</string>
+    <string name="nonDeductTDS">In case you are eligible for non deduction of TDS then please submit 15G/H form to Bajaj or Nivesh team</string>
+    <string name="nonCumulativeROI">Non- Cumulative ROI:</string>
+    <string name="cumulativeROI">Cumulative ROI:</string>
+    <string name="cumulativeText">Cumulative</string>
+    <string name="regularInterestPayment">Regular Interest Payment:</string>
+    <string name="maturityAmount">Maturity Amount:</string>
+    <string name="minAmount">min amount : Rs </string>
+    <string name="OR">OR, enter tenure in months</string>
+    <string name="OneYear">1 Year</string>
+    <string name="TwoYears">2 Years</string>
+    <string name="ThreeYears">3 Years</string>
+    <string name="FourYears">4 Years</string>
+    <string name="FiveYears">5 Years</string>
+    <string name="bajajFD">BajajFD</string>
+    <string name="category">InterestPayoutFreq</string>
+    <string name="language">en-UK-0</string>
+    <string name="minMaxValidation">Min. 12 months, Max. 60 months</string>
+    <string name="minAmountCategory">MINAmount</string>
+    <string name="MaxAmountCategory">MAXAmount</string>
+
+    <!-- Validations   -->
+    <string name="emptyAmount">Please enter amount</string>
+    <string name="emptyAmountFirst">Please enter amount first</string>
+
+    <string name="validMinAmount">Entered amount should be greater than minimum amount</string>
+    <string name="validMaxAmount">Entered amount should be less than 5 Cr.</string>
+
+    <string name="emptyInterestPayout">Please select Interest Payout</string>
+    <string name="emptyInterestTenure">Please select Investment Tenure</string>
+
+
+    <!--  Step 2   -->
+    <string name="mandatoryField">All fields are mandatory other then optional</string>
+    <string name="personalDetails">Personal Details</string>
+    <string name="enterMobileNumber">Enter Mobile Number</string>
+    <string name="enterDateOfBirth">Enter Date Of Birth</string>
+    <string name="enterPanNumber">Enter PAN Number</string>
+    <string name="selectTitle">Select Title</string>
+    <string name="enterFirstName">Enter First Name</string>
+    <string name="middleName">Enter Middle Name <font color='#33000000'>(Optional)</font></string>
+    <string name="enterLastName">Enter Last Name</string>
+    <string name="selectGender">Select Gender</string>
+    <string name="enterEmailAddress">Enter Email Address</string>
+    <string name="enterOccupation">Select Occupation</string>
+    <string name="enterQualification">Enter Qualification</string>
+    <string name="selectMaritalStatus">Select Marital Status</string>
+    <string name="selectRelation">Select Relationship</string>
+    <string name="relationName">Relation Name</string>
+    <string name="enterAddress1">Enter Address Line 1</string>
+    <string name="enterAddress2">Enter Address Line 2</string>
+    <string name="enterAddress3">Enter Address Line 3</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="pinCode">PinCode</string>
+    <string name="verifiedText">Verified</string>
+    <string name="notVerifiedText">Not Verified</string>
+    <string name="salutationCategory">Salutation</string>
+    <string name="genderCategory">Gender</string>
+    <string name="maritalCategory">MaritalStatus</string>
+    <string name="occupationCategory">Occupation</string>
+    <string name="relationshipCategory">NomineeRelationship</string>
+    <string name="selectIncome">Select Income</string>
+    <string name="selectState">Select State</string>
+    <string name="selectCity">Select City</string>
+    <string name="annualIncome">AnnualIncome</string>
+    <string name="information">Information</string>
+    <string name="x">X</string>
+    <string name="accountNo">A/c No:</string>
+    <string name="acIfsc">A/c IFSC :</string>
+    <string name="add">Add</string>
+
+
+    <!-- Nominee Details   -->
+    <string name="nomineeDetailsOptional">Nominee Details (Optional)</string>
+    <string name="nomineeFirstName">Nominee First Name</string>
+    <string name="nomineeMiddleName">Nominee Middle Name <font color='#33000000'>(Optional)</font></string>
+    <string name="nomineeLastName">Nominee Last Name</string>
+    <string name="nomineeDateOfBirth">Nominee Date Of Birth</string>
+    <string name="nomineeAddressSameAsPrimaryApplicantAddress">Nominee address is same as Primary Applicant’s address</string>
+
+    <!-- Guardian Details  -->
+    <string name="guardianNameOptional">Guardian name <font color='#33000000'>(Optional)</font></string>
+    <string name="guardianAgeOptional">Guardian Age <font color='#33000000'>(Optional)</font></string>
+    <string name="guardianAddressOptional">Guardian Address <font color='#33000000'>(Optional)</font></string>
+    <string name="guardianPinCodeOptional">Guardian PinCode <font color='#33000000'>(Optional)</font></string>
+
+    <!-- Bank Details  -->
+    <string name="bankDetails">Bank Details</string>
+    <string name="addNewAccount">+ Add New Account</string>
+    <string name="accountType">Account type *</string>
+    <string name="savingsAccount">Savings account</string>
+    <string name="currentAccount">Current account</string>
+    <string name="enterIfscCode">Enter IFSC Code</string>
+    <string name="enterAccountNumber">Enter Account Number</string>
+    <string name="enterBankName">Enter Bank Name</string>
+    <string name="enterBranchName">Enter Branch Name</string>
+
+    <!-- Payment Mode   -->
+    <string name="paymentMode">Payment Mode</string>
+    <string name="Upi">UPI</string>
+    <string name="netBanking">NetBanking</string>
+    <string name="upto1LakhOnly">Upto Rs. 1 Lakh Only</string>
+    <string name="eligibleBankOption">Eligible Bank Option</string>
+    <string name="paymentModeCategory">PaymentMode</string>
+    <string name="customerCategory">CustomerCategory</string>
+    <string name="validGuardianDetails">Please enter Guardian Details</string>
+
+    <!-- Validations   -->
+    <string name="emptyMobileNumber">Please enter mobile number</string>
+    <string name="inValidMobileNumber">Mobile number should have at least 10 digits</string>
+    <string name="inValidIndianMobileNumber">Mobile number should start with 6,7,8 and 9</string>
+    <string name="emptyDOB">Please select date of birth</string>
+
+    <string name="emptyPAN">Please enter PAN number</string>
+    <string name="invalidPAN">Invalid PAN</string>
+    <string name="accountVerified">Account Verified</string>
+
+
+    <string name="emptyTitle">Please select title</string>
+    <string name="emptyGender">Please select gender</string>
+
+    <string name="emptyFirstName">Please enter First Name</string>
+    <string name="validFirstName">Please enter valid First Name</string>
+
+    <string name="emptyMiddleName"> Please enter Middle name</string>
+    <string name="validMiddleName">Please enter valid Middle Name</string>
+
+    <string name="emptyLastName">Please enter Last name</string>
+    <string name="validLastName">Please enter valid Last Name</string>
+
+    <string name="emptyEmail">Please enter email address</string>
+    <string name="validEmail">Please enter valid email address</string>
+
+    <string name="emptyOccupation">Please select occupation</string>
+    <string name="emptyIncome">Please select income</string>
+
+    <string name="emptyQualification">Please select Qualification</string>
+    <string name="emptyMaritalStatus">Please select marital status </string>
+    <string name="emptyRelation">Please select relation </string>
+    <string name="emptyRelationName">Please enter relation name</string>
+
+    <string name="emptyAddressLine1">Please enter address 1</string>
+    <string name="emptyAddressLine2">Please enter address 2</string>
+    <string name="emptyAddressLine3">Please enter address 3</string>
+
+    <string name="emptyArea">Please enter area</string>
+    <string name="emptyCity">Please select city</string>
+    <string name="emptyState">Please select state</string>
+    <string name="emptyPinCode">Please enter PinCode</string>
+    <string name="validPinCode">Please enter valid PinCode</string>
+
+    <string name="emptyAccNo">Please enter account number</string>
+    <string name="emptyIFSCCode">Please enter IFSC code</string>
+    <string name="validIFSCCode">Please enter valid IFSC code</string>
+    <string name="emptyBranchName">Please enter branch name</string>
+    <string name="emptyBankName">Please select bank name</string>
+
+    <string name="emptyPaymentMode">Please select payment mode</string>
+
+
+    <!--  Step Three  -->
+    <string name="uploadKycDocuments">Upload KYC Documents</string>
+    <string name="addressProofType">Address Proof Type <font color='#E9161E'>*</font></string>
+    <string name="aadhaarFront">Aadhaar front <font color='#E9161E'>*</font></string>
+    <string name="aadhaarBack">Aadhaar Back <font color='#E9161E'>*</font></string>
+    <string name="panUpload">PAN Upload <font color='#E9161E'>*</font></string>
+    <string name="photoUpload">Photo Upload <font color='#E9161E'>*</font></string>
+    <string name="uploadFile">Upload File</string>
+    <string name="photograph">Photograph <font color='#E9161E'>*</font></string>
+    <string name="pan">PAN <font color='#E9161E'>*</font></string>
+    <string name="docType">Doctype</string>
+    <string name="selectOption">Select Option</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="panLabel">PAN</string>
+    <string name="uploadPanDoc">Upload PAN Document</string>
+    <string name="uploadPhotoDoc">Upload Photo Document</string>
+    <string name="uploadAadharBackDoc">Upload Aadhar Back Document</string>
+    <string name="fiveAccountValidation">You can not add more than five accounts</string>
+    <string name="takePhoto">Take Photo</string>
+    <string name="chooseFromGallery">Choose from Gallery</string>
+    <string name="addPhoto">Add Photo!</string>
+    <string name="cancel">Cancel</string>
+    <string name="aadhar">Aadhar</string>
+
+    <!--  Step Four  -->
+    <string name="makePayment">Make Payment</string>
+    <string name="investedAmount">Invested Amount</string>
+    <string name="tenure">Tenure</string>
+    <string name="interestPayout">Interest Payout</string>
+    <string name="rateOfInterest">Rate of Interest</string>
+    <string name="termsAndCondition"><![CDATA[Terms & condition]]></string>
+    <string name="termsCondition">I undertake to inform company any change in status of my nationality or tax residence. I am making investment from my Indian resident Individual Savings bank account. I/ We confirm that 1/we have read and understood the detailed terms and conditions annexed to this Application including the interest rate and other charges. I have gone through the financials and other statements/particulars representations furnished/made by the company and after careful consideration I am making the deposit with the company at my own risk and volition. I have read and agree to the <font color='#5077FF'>Terms &amp; conditions</font></string>
+    <string name="pay">PAY</string>
+    <string name="payment">Payment</string>
+    <string name="validTermsConditions">Please accept terms &amp; conditions.</string>
+
+
+    <!-- Step Five   -->
+    <string name="viewOrder">View Order</string>
+    <string name="transactionIsSuccessful">Your transaction is successful.</string>
+    <string name="certificateOnEmail">You will receive fixed deposit certificate\nwithin 3 working days on email</string>
+    <string name="downloadInvoice">Download Invoice</string>
+    <string name="TransactionIsUnsuccessful">Your transaction is unsuccessful.</string>
+    <string name="tryAgainLater">Sorry for the inconvenience please try again later</string>
+    <string name="retry">Retry</string>
+
+
+    <!-- Others -->
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="click">click</string>
+    <string name="viewpager">viewpager</string>
+    <string name="contentDescription">content description</string>
+    <string name="viewAvailablePaymentModes">View available payment modes</string>
+    <string name="onceYouClick">Once you click on PAY, your order will be placed and you will be redirected to payment gateway.</string>
+    <string name="seniorCitizen">Senior Citizen</string>
+    <string name="nonSeniorCitizen">Non Senior Citizen</string>
+    <string name="add_new_account">Add New Account</string>
+
+    <string name="Ok"><font fgcolor='#FF8E8E93'>OK</font></string>
+    <string name="cameraPermission">You Need to Give Permission of Camera for uploading Image</string>
+    <string name="galleryPermission">You Need to Give Permission of Gallery for uploading Image</string>
+    <string name="permissionRequired">Permission Required !</string>
+    <string name="permissionsRequired">Permission\'s Required !</string>
+    <string name="validTermsCondition"><![CDATA[Please select at least one Term & Condition.]]></string>
+
+
+</resources>

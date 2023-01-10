@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="@dimen/margin_10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvBankDetails"
+        style="@style/semiBoldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/greyColor3"
+        android:drawablePadding="@dimen/margin_5"
+        android:padding="@dimen/margin_3"
+        android:text="@string/bankDetails"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/rVBankList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012"
+        app:drawableEndCompat="@drawable/ic_arrow_down" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rVBankList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_5"
+        app:layout_constraintBottom_toTopOf="@+id/tvAddAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBankDetails" />
+
+    <TextView
+        android:id="@+id/tvAddAccount"
+        style="@style/BoldStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/addNewAccount"
+        android:textColor="@color/black"
+        android:paddingStart="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_1"
+        app:layout_constraintBottom_toTopOf="@+id/rlPaymentMode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rVBankList" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlPaymentMode">
+
+        <RadioButton
+            android:id="@+id/rbUPI"
+            style="@style/regularStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Upi"
+            android:textSize="@dimen/text_size_14"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="355dp" />
+
+        <RadioButton
+            android:id="@+id/rbNetBanking"
+            style="@style/regularStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_150"
+            android:text="@string/netBanking"
+            android:textSize="@dimen/text_size_14"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="355dp" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlPaymentMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@color/greyColor3"
+        android:padding="@dimen/margin_5"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddAccount"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvPaymentModeLabel"
+            style="@style/semiBoldStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/paymentMode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="312dp" />
+
+        <TextView
+            android:id="@+id/tvAvailablePaymentMode"
+            style="@style/regularStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:text="@string/viewAvailablePaymentModes"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_10"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="312dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

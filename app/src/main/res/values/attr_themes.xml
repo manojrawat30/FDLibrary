@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="theme_Primary" format="reference" />
+    <attr name="theme_TextBlackColor" format="reference" />
+    <attr name="theme_PrimaryDark" format="reference" />
+    <attr name="theme_Accent" format="reference" />
+
+</resources>

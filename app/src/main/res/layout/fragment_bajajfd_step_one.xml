@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/NiveshColorAppBg"
+    tool:context=".ui.fragment.StepTwoBajajFDFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_80"
+        android:background="@color/NiveshColorAppBg"
+        android:fillViewport="true"
+        android:padding="@dimen/margin_5"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewOne"
+            style="@style/CustomCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardElevation="@dimen/margin_1"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_10">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/margin_150"
+                    android:layout_height="@dimen/margin_18"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/bajaj_logo" />
+
+                <TextView
+                    android:id="@+id/tvFdRating"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/schemeRating"
+                    android:textColor="@color/greyColor2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_10">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlDepositAmount"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_5"
+                        android:hint="@string/investmentAmount">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/svg_rs"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:textColorHint="@color/greyColor2"
+                            android:textSize="@dimen/text_size_14"
+                            tool:ignore="TextContrastCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/txtMinAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlInterestPayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_5"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/spInterestPayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_with_line"
+                            android:hint="@string/selectInterestPayout"
+                            android:inputType="none"
+                            android:padding="@dimen/margin_10"
+                            android:labelFor="@+id/spInterestPayout"
+                            android:textColorHint="@color/greyColor2"
+                            android:textSize="@dimen/text_size_14"
+                            tool:ignore="DuplicateSpeakableTextCheck,LabelFor,TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlInterestTenure"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_5"
+                        app:hintEnabled="false"
+                        app:layout_constraintTop_toBottomOf="@+id/tlInterestPayout">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/spTenure"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_10"
+                            android:background="@drawable/rounded_corner_with_line"
+                            android:hint="@string/selectInterestTenure"
+                            android:inputType="none"
+                            android:labelFor="@+id/spInterestTenure"
+                            android:textColorHint="@color/greyColor2"
+                            android:textSize="@dimen/text_size_14"
+                            tool:ignore="DuplicateSpeakableTextCheck,LabelFor,TextContrastCheck" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/minMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:text="@string/minMaxValidation"
+                        android:textColor="@color/greyColor2"
+                        android:textSize="@dimen/text_size_12"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tlInterestTenure" />
+
+                    <!--  OR Layout -->
+                    <TextView
+                        android:id="@+id/ORLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="@string/OR"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_14"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTenure"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/swSeniorCitizen"
+                        style="@style/regularStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:text="@string/upto0.25next"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_12" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvMaturityInstruction"
+                    style="@style/regularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/greyColor3"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_3"
+                    android:paddingEnd="@dimen/margin_1"
+                    android:paddingBottom="@dimen/margin_3"
+                    android:text="@string/maturityInstructions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingEnd="@dimen/margin_10">
+
+                    <RadioButton
+                        android:id="@+id/rbAutoCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:checked="true"
+                        android:text="@string/additionalDetailOne"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <RadioButton
+                        android:id="@+id/rbAutoRenew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:text="@string/additionalDetailTwo"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <RadioButton
+                        android:id="@+id/rbAutoBoth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/black"
+                        android:text="@string/additionalDetailThree"
+                        android:textSize="@dimen/text_size_12" />
+
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tvTaxDeducted"
+                    style="@style/semiBoldStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:text="@string/taxDeductedAtSourceTds"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvUploadFormLabel"
+                    style="@style/regularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/TDSForm"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <RadioButton
+                    android:id="@+id/rbDeductTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:buttonTint="@color/black"
+                    android:checked="true"
+                    android:orientation="horizontal"
+                    android:text="@string/deductTds"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tvSubmitLabel"
+                    style="@style/regularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/nonDeductTDS"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:background="@color/greyColor4"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_15">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtCumulativeNon"
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:text="@string/nonCumulativeROI"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:id="@+id/tvROI"
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:text=""
+                            android:textColor="@color/lightBlue"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:text="@string/regularInterestPayment"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:id="@+id/tvFrequency"
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:text=""
+                            android:textColor="@color/lightBlue"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/margin_10"
+                            android:text="@string/maturityAmount"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:id="@+id/tvMaturityAmount"
+                            style="@style/regularStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:text=""
+                            android:textColor="@color/lightBlue"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/next"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tool:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

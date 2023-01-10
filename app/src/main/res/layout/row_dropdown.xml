@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/margin_1"
+    android:paddingStart="0dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rlParent"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:padding="@dimen/margin_10"
+            android:layout_width="@dimen/margin_55"
+            android:layout_height="@dimen/margin_35"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/txtInterestRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

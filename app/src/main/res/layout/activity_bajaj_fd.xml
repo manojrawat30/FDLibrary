@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BajajFdMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:contentDescription="@string/back"
+                android:gravity="center"
+                android:padding="@dimen/margin_10"
+                android:src="@drawable/svg_back" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?actionBarSize"
+                android:padding="@dimen/margin_16"
+                android:text="@string/fd"
+                android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyColor4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10">
+
+            <ImageView
+                android:id="@+id/stepOne"
+                android:layout_width="@dimen/margin_19"
+                android:layout_height="@dimen/margin_19"
+                android:contentDescription="@string/step1"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_3"
+                android:text="@string/step1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+            <View
+                android:layout_width="@dimen/margin_22"
+                android:layout_height="@dimen/margin_2"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:background="@color/green" />
+
+            <ImageView
+                android:id="@+id/stepTwo"
+                android:layout_width="@dimen/margin_19"
+                android:layout_height="@dimen/margin_19"
+                android:contentDescription="@string/step2"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_3"
+                android:text="@string/step2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+            <View
+                android:layout_width="@dimen/margin_22"
+                android:layout_height="@dimen/margin_2"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:background="@color/green" />
+
+            <ImageView
+                android:id="@+id/stepThree"
+                android:layout_width="@dimen/margin_19"
+                android:layout_height="@dimen/margin_19"
+                android:contentDescription="@string/step3"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_3"
+                android:text="@string/step3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_12" />
+
+            <LinearLayout
+                android:id="@+id/llStep4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/margin_22"
+                    android:layout_height="@dimen/margin_2"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:background="@color/green" />
+
+                <ImageView
+                    android:id="@+id/stepFour"
+                    android:layout_width="@dimen/margin_19"
+                    android:layout_height="@dimen/margin_19"
+                    android:contentDescription="@string/step4"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_3"
+                    android:text="@string/step4"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.nivesh.production.bajajfd.adapter.DisableAdapter
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/viewpager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/NiveshColorAppBg"
+    tools:context="com.nivesh.production.bajajfd.ui.fragment.StepFourBajajFDFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_100"
+        android:background="@color/NiveshColorAppBg"
+        android:fillViewport="true"
+        android:padding="@dimen/margin_5"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CustomCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/margin_10">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/margin_150"
+                    android:layout_height="@dimen/margin_18"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/bajaj_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFDRating"
+                    style="@style/regularStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingEnd="@dimen/margin_1"
+                    android:text="@string/schemeRating"
+                    android:textColor="@color/greyColor2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+                <TextView
+                    android:id="@+id/tvMakePayment"
+                    style="@style/semiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:background="@color/greyColor3"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_2"
+                    android:paddingEnd="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_2"
+                    android:text="@string/makePayment"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFDRating" />
+
+                <TextView
+                    android:id="@+id/lblMakePayment"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/investedAmount"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@id/lblTenure"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMakePayment" />
+
+                <TextView
+                    android:id="@+id/tvInvestedAmount"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/lblMakePayment"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMakePayment" />
+
+                <TextView
+                    android:id="@+id/lblTenure"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/tenure"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/lblInterestPayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblMakePayment" />
+
+                <TextView
+                    android:id="@+id/tvTenure"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/lblTenure"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInvestedAmount" />
+
+                <TextView
+                    android:id="@+id/lblInterestPayout"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/interestPayout"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/lblRateOfInterest"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblTenure" />
+
+                <TextView
+                    android:id="@+id/tvInterestPayout"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/lblInterestPayout"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTenure" />
+
+                <TextView
+                    android:id="@+id/lblRateOfInterest"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:text="@string/rateOfInterest"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/tvTermsCondition"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblInterestPayout" />
+
+                <TextView
+                    android:id="@+id/tvRateOfInterest"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:padding="@dimen/margin_5"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/tvTermsCondition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/lblRateOfInterest"
+                    app:layout_constraintTop_toBottomOf="@+id/tvInterestPayout" />
+
+                <TextView
+                    android:id="@+id/tvTermsCondition"
+                    style="@style/semiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:background="@color/greyColor3"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingTop="@dimen/margin_2"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_2"
+                    android:text="@string/termsAndCondition"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toTopOf="@+id/llRVTerms"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblRateOfInterest" />
+
+                <LinearLayout
+                    android:id="@+id/llRVTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTermsCondition"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTerms"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/item_customer_list_preview"
+
+
+                        />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llRVTerms" />
+
+                <TextView
+                    android:id="@+id/tvTermsAndCondition"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    android:text="@string/termsCondition"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/checkBox"
+                    app:layout_constraintTop_toBottomOf="@+id/llRVTerms" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvOnceClick"
+        style="@style/regularStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/margin_15"
+        android:paddingEnd="@dimen/margin_15"
+        android:text="@string/onceYouClick"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:backgroundTint="@color/blue"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnceClick" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/tvOnceClick" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

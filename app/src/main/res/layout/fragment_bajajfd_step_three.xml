@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/NiveshColorAppBg"
+    tools:context=".ui.fragment.StepFourBajajFDFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_80"
+        android:padding="@dimen/margin_5"
+        android:background="@color/NiveshColorAppBg"
+        android:fillViewport="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CustomCardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardElevation="@dimen/margin_1"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/childConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/margin_150"
+                    android:layout_height="@dimen/margin_18"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:contentDescription="@string/contentDescription"
+                    android:src="@drawable/bajaj_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvFDRating"
+                    style="@style/regularStyle"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schemeRating"
+                    android:textColor="@color/greyColor2"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toTopOf="@+id/tvUploadKYCDocument"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+                <TextView
+                    android:id="@+id/tvUploadKYCDocument"
+                    style="@style/semiBoldStyle"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:paddingStart="@dimen/margin_15"
+                    android:paddingEnd="@dimen/margin_20"
+                    android:background="@color/greyColor3"
+                    android:text="@string/uploadKycDocuments"
+                    android:textSize="@dimen/text_size_14"
+                    android:textColor="@color/black"
+                    app:drawableEndCompat="@drawable/svg_down_arrow"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFDRating"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPAN"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/pan"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnPANUpload"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnPANUpload" />
+
+                <Button
+                    android:id="@+id/btnPANUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="21dp"
+                    android:backgroundTint="@color/greyColor4"
+                    android:paddingLeft="@dimen/margin_30"
+                    android:paddingRight="@dimen/margin_30"
+                    android:text="@string/uploadFile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/btnPhotoUpload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.78"
+                    app:layout_constraintStart_toEndOf="@+id/tvPAN"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUploadKYCDocument"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <ImageView
+                    android:id="@+id/ivPan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/ic_baseline_check_24"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnPANUpload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toEndOf="@+id/btnPANUpload"
+                    app:layout_constraintTop_toTopOf="@+id/btnPANUpload"
+                    app:layout_constraintVertical_bias="0.333" />
+
+                <TextView
+                    android:id="@+id/tvPhotoUpload"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/photograph"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnPhotoUpload"
+                    app:layout_constraintStart_toStartOf="@+id/tvPAN"
+                    app:layout_constraintTop_toTopOf="@+id/btnPhotoUpload" />
+
+                <Button
+                    android:id="@+id/btnPhotoUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginBottom="15dp"
+                    android:backgroundTint="@color/greyColor4"
+                    android:paddingLeft="@dimen/margin_30"
+                    android:paddingRight="@dimen/margin_30"
+                    android:text="@string/uploadFile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/spAddressType"
+                    app:layout_constraintEnd_toEndOf="@+id/btnPANUpload"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvPhotoUpload"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPANUpload" />
+
+                <ImageView
+                    android:id="@+id/ivPhotograph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/ic_baseline_check_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnPhotoUpload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.384"
+                    app:layout_constraintStart_toEndOf="@+id/btnPhotoUpload"
+                    app:layout_constraintTop_toTopOf="@+id/btnPhotoUpload"
+                    app:layout_constraintVertical_bias="0.333" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spAddressType"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:layout_marginStart="@dimen/margin_15"
+                    android:layout_marginEnd="@dimen/margin_15"
+                    app:hintEnabled="false"
+                    app:layout_constraintTop_toBottomOf="@+id/btnPhotoUpload">
+
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/spDocType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_with_line"
+                        android:hint="@string/addressProofType"
+                        android:inputType="none"
+                        android:padding="@dimen/margin_5"
+                        android:labelFor="@+id/spInterestPayout"
+                        android:textColorHint="@color/greyColor2"
+                        android:textSize="@dimen/text_size_14"
+                        tools:layout_editor_absoluteY="230dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvAadhaarFront"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aadhaarFront"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintStart_toStartOf="@+id/tvAadhaarBack"
+                    app:layout_constraintTop_toTopOf="@+id/btnAadhaarFrontUpload" />
+
+                <Button
+                    android:id="@+id/btnAadhaarFrontUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="28dp"
+                    android:backgroundTint="@color/greyColor4"
+                    android:paddingLeft="@dimen/margin_30"
+                    android:paddingRight="@dimen/margin_30"
+                    android:text="@string/uploadFile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/spAddressType"
+                    app:layout_constraintTop_toBottomOf="@+id/spAddressType"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <ImageView
+                    android:id="@+id/ivAadharFront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/ic_baseline_check_24"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.38"
+                    app:layout_constraintStart_toEndOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintTop_toTopOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintVertical_bias="0.333" />
+
+                <Button
+                    android:id="@+id/btnAadhaarBackUpload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="21dp"
+                    android:backgroundTint="@color/greyColor4"
+                    android:paddingLeft="@dimen/margin_30"
+                    android:paddingRight="@dimen/margin_30"
+                    android:text="@string/uploadFile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintHorizontal_bias="0.992"
+                    app:layout_constraintStart_toEndOf="@+id/tvAadhaarBack"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAadhaarFrontUpload"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/ivAadharBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="7dp"
+                    android:background="@drawable/ic_baseline_check_24"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAadhaarBackUpload"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.38"
+                    app:layout_constraintStart_toEndOf="@+id/btnAadhaarBackUpload"
+                    app:layout_constraintTop_toTopOf="@+id/btnAadhaarBackUpload"
+                    app:layout_constraintVertical_bias="0.333" />
+
+                <TextView
+                    android:id="@+id/tvAadhaarBack"
+                    style="@style/regularStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/aadhaarBack"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnAadhaarBackUpload"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/btnAadhaarBackUpload"
+                    app:layout_constraintVertical_bias="0.406" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:backgroundTint="@color/blue"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:layout_marginTop="@dimen/margin_10"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/next"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

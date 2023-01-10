@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/margin_1"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtLabel"
+            android:gravity="start"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/margin_2"
+            android:layout_weight="0.87"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_12"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/margin_4"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.13"
+            android:checked="false"
+            android:drawablePadding="@dimen/margin_2" />
+
+    </LinearLayout>
